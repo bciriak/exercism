@@ -4,18 +4,22 @@ describe('ResistorColor', () => {
   describe('Color codes', () => {
     test('Black', () => {
       expect(colorCode("black")).toEqual(0)
-    })
+    });
 
-    xtest('White', () => {
+    test('White', () => {
       expect(colorCode("white")).toEqual(9)
-    })
+    });
 
-    xtest('Orange', () => {
+    test('Orange', () => {
       expect(colorCode("orange")).toEqual(3)
     })
-  })
+  });
 
-  xtest('Colors', () => {
+  test('Colors', () => {
     expect(COLORS).toEqual(["black","brown","red","orange","yellow","green","blue","violet","grey","white"])
+  });
+
+  test('Number instead of string', () => {
+    expect(colorCode(1)).toEqual('Must insert string color')
   })
-})
+});
